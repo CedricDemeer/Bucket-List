@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+<div>
+    <h1>{{ id.title }}</h1>
+    <p>catégorie: {{ id.category.name }}</p>
+    <p>{{ id.description }}</p>    
+    <p>{{ id.author }}</p>
+</div>
+{% endblock %}
+{% block title %}{{ id.title }}{% endblock %}

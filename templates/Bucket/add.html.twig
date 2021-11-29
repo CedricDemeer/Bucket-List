@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+    <h1>Ajout d'idée </h1>
+
+    <div class="formulaire">
+    {{ form_start(Formulaire) }}
+    {{ form_widget(Formulaire) }}
+    <button type="submit">Ajouter</button>
+    {{ form_end(Formulaire) }}
+    </div>
+
+{% endblock %}
+{% block title %}List | ADD{% endblock %}

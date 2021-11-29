@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Antu_color-fill.svg/512px-Antu_color-fill.svg.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <title>{% block title %}Bucket-List{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+
+            <h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Antu_color-fill.svg/512px-Antu_color-fill.svg.png" alt="logo" class="logo">
+                Bucket-List
+            </h1>
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+            {% endfor %}
+        </header>
+        <nav> <ul>
+                <li><a href="{{ path('home') }}">Home</a></li>
+                <li><a href="{{ path('list') }}">List</a></li>
+                <li><a href="{{ path('addList') }}">Ajout list</a></li>
+                <!--<li><a href="{{ path('detail') }}">Detail</a></li>-->
+                <li><a href="{{ path('about') }}">About</a></li>
+            </ul>
+        </nav>
+        <main>{% block main %}{% endblock %}</main>
+        <footer>
+
+            <p>
+            By Fabián Alexis (https://github.com/fabianalexisinostroza/Antu) [<a
+                    href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a
+                    href="https://commons.wikimedia.org/wiki/File%3AAntu_color-fill.svg">via Wikimedia
+                Commons</a>
+            </p>
+            &copy; Bucket-List {{ "now"|date("Y") }}
+
+        </footer>
+    </div>
+
+</body>
+</html>

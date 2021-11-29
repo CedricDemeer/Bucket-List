@@ -1,0 +1,21 @@
+.logo{
+    width: 80px;
+}
+body{
+    background-color: beige;
+    font-family: 'ABeeZee', sans-serif;
+}
+.alert{
+    padding: 20px;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+.alert-success{
+    background-color: darkgreen;
+}
+.alert-error {
+    background-color: #B0413E;
+}
